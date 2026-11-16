@@ -143,8 +143,11 @@ def convert(md, label=None, readme=False):
 PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
 % 用 XeLaTeX 編譯（Overleaf：Menu → Compiler → XeLaTeX）
 \usepackage[fontset=none]{ctex}
-\setCJKmainfont{Noto Serif CJK TC}[BoldFont=Noto Sans CJK TC]
-\setCJKsansfont{Noto Sans CJK TC}
+% ---- Overleaf 免費版編譯時間有限：編輯時只編譯要改的章節 ----
+% 在下面列出要編譯的檔案（逗號分隔，不加 .tex）；要輸出全本時把這行整行註解掉。
+% 全本需要較長編譯時間（Overleaf 付費方案，或本機 xelatex）。
+\includeonly{intro,cases/06_00940}
+\setCJKmainfont{Noto Sans CJK TC}   % 只載入一套字型，縮短編譯時間
 \usepackage[margin=2.2cm]{geometry}
 \usepackage{amssymb,graphicx,float,booktabs,xltabular,enumitem,textcomp}
 \usepackage[hidelinks]{hyperref}
@@ -171,11 +174,11 @@ def main():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     readme = readme.split("\n", 1)[1]           # 去掉 README 的 H1（用 \maketitle）
     (OUT / "intro.tex").write_text(r"\section*{導讀}" + "\n" + r"\addcontentsline{toc}{section}{導讀}" + "\n" + convert(readme, readme=True), encoding="utf-8")
-    body = [PREAMBLE, r"\input{intro}"]
+    body = [PREAMBLE, r"\include{intro}"]
     for c in CASES:
         p = pathlib.Path(c)
         (OUT / "cases" / (p.stem + ".tex")).write_text(convert(p.read_text(encoding="utf-8"), label=LABEL[p.name]), encoding="utf-8")
-        body.append(r"\input{cases/" + p.stem + "}")
+        body.append(r"\include{cases/" + p.stem + "}")
     body.append(r"\end{document}")
     (OUT / "main.tex").write_text("\n".join(body) + "\n", encoding="utf-8")
     ZIP.parent.mkdir(parents=True, exist_ok=True)
