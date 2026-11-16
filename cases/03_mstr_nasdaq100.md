@@ -30,7 +30,7 @@
 
 ## 2. 機制
 
-- **制度設計**：Nasdaq-100 是「Nasdaq 上市、非金融、市值前 100」，不審查資產組成。MSTR 連三個月平均漲逾 40%、市值接近 1,000 億美元，自然達標（[The Star/Reuters](https://www.thestar.com.my/business/business-news/2024/12/16/microstrategy-palantir-added-to-nasdaq-100-with-moderna-facing-an-exit)）。
+- **制度設計**：Nasdaq-100 是「Nasdaq 上市、非金融、市值前 100」，不審查資產組成。MSTR 股價大漲、市值接近 1,000 億美元，按市值排名自然達標（[The Star/Reuters](https://www.thestar.com.my/business/business-news/2024/12/16/microstrategy-palantir-added-to-nasdaq-100-with-moderna-facing-an-exit)）。
 - **飛輪**：mNAV > 1 時，按市價增發 1 美元新股可以買到超過 1 美元的比特幣，每股含幣量上升（公司稱 BTC Yield），這又支撐溢價。指數納入讓被動基金成為這批新股的固定買家。
 - **反轉條件**：mNAV < 1 時，發股買幣會稀釋每股含幣量，飛輪停轉；公司改用特別股融資，但特別股有固定股息，現金壓力上升（The Block 引 CryptoQuant：年股息義務約 12 億美元、現金約 14 億美元）。
 - **人性**：溢價本身的來源是「受限資金想要比特幣曝險」：2024-01 現貨 ETF 上市前，很多帳戶只能透過股票持有比特幣（見案例 4）。
@@ -48,7 +48,7 @@
 
 ## 4. 我的解讀（草稿，待討論）
 
-1. **指數納入是把「溢價」制度化的一步。** 被動資金不管 mNAV 多少都得買，公司又能用 ATM 隨時供應新股，等於被動基金透過 MSTR 以溢價買比特幣。這個接縫的關閉方式不是禁止，而是 MSCI 那一招：不因新發股提高權重。這正好符合接縫理論第 11 節的規律：動的是產品／指數結構，而不是參與門檻。
+1. **指數納入是把「溢價」制度化的一步。** 被動資金不管 mNAV 多少都得買，公司又能用 ATM 隨時供應新股，等於被動基金透過 MSTR 以溢價買比特幣。這個接縫的關閉方式不是禁止，而是 MSCI 那一招：不因新發股提高權重。這符合本集的共通規律（見 README「五件事」第 4 點）：真正關掉接縫的是動產品／指數結構，而不是提高參與門檻。
 2. **mNAV 是 regime 變數，不是估值訊號。** 2.7 倍到 0.88 倍花了一年多，中間沒有明確的反轉點可以做空；真正有用的是把 mNAV = 1 當成飛輪方向翻轉的門檻：高於 1 時公司是比特幣的買家，低於 1 時公司可能變成賣家（執行長 Phong Le 2025-11 底在 podcast 說，若 mNAV < 1 且沒有其他資金來源，會賣比特幣來付特別股股息，[Cointelegraph](https://cointelegraph.com/news/strategy-sell-bitcoin-last-resort-mnav-capital)；[Fortune](https://fortune.com/2025/12/02/stocks-bitcoin-strategy-ratio-market-cap)）。
 3. **溢價的需求端在 2024-01 已經開始被拆掉。** 現貨 ETF 讓受限帳戶有了更便宜的比特幣曝險，之後 MSTR 的溢價主要靠「槓桿 + 飛輪敘事」撐住。這提醒我們：一個接縫（無法直接持有比特幣）關掉之後，殘留的溢價會慢慢流失，而不是一次歸零。
 

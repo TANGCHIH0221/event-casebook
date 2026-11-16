@@ -4,7 +4,7 @@
 >
 > 這個 repo 整理了 32 個 2021–2026 年的全球與台灣案例。每個案例都回答同一組問題：哪兩套規則疊出了不對稱、誰被迫交易、量多大、誰在對面接、規則會不會改。台灣的案例我用公開資料自己重算，國際案例逐條查證來源。原始手冊有不少錯誤，每案第 5 節都有勘誤。
 
-**狀態**：32 案完成查證與改寫（持續更新）。台灣案例 8 個有自己的資料分析與圖。
+**狀態**：32 案完成查證與改寫（持續更新）。7 個台灣案例有自己的資料分析與圖；另有 5 個案例用 FinMind 自行計算台股的反應（14、23、24、27、28）。
 **資料**：FinMind（證交所／櫃買日 K、三大法人、匯率、美股）、證交所與櫃買中心處置公告、各案一手來源（法院判決、監管命令、公司申報）
 **工具**：Python / pandas / matplotlib
 
@@ -157,8 +157,8 @@
 python3 scripts/case06_00940.py
 python3 scripts/case18_stabilization_fund.py
 python3 scripts/case31_tsm_adr.py
-python3 scripts/case10_11_disposition.py      # 需要本機處置資料（見腳本說明）
-python3 scripts/case19_fetch_disposition.py && python3 scripts/case19_disposition_reform.py
+python3 scripts/case10_11_disposition.py      # 需要本機處置公告 parquet（FinMind 免費版不能一次抓全市場）
+python3 scripts/case19_fetch_disposition.py && python3 scripts/case19_disposition_reform.py   # 第二支需要本機日 K parquet
 ```
 
 `scripts/finmind.py` 會把抓過的資料快取在 `data/`。
