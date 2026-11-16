@@ -1,0 +1,6 @@
+# FinMind 原始快取（重跑 scripts 會自動重抓）
+data/Taiwan*.csv
+data/USStock*.csv
+.env
+__pycache__/
+.DS_Store
